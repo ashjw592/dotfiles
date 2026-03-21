@@ -1,0 +1,28 @@
+# ~/.config/ghostty/config
+
+theme = Catppuccin Frappe
+custom-shader = shaders/cursor_warp.glsl
+
+# ── Font ──────────────────────────────────────
+font-family = "JetBrains Mono"
+font-size = 14
+
+# ── Cursor ────────────────────────────────────
+# Default to beam (insert mode). The zsh hooks will
+# send OSC sequences to swap it to a block in normal mode.
+cursor-style = bar
+cursor-style-blink = false
+
+# ── Shell ─────────────────────────────────────
+command = /usr/bin/zsh
+
+# ── Shell integration ─────────────────────────
+# This is what allows cursor shape changes to actually
+# work — Ghostty listens for OSC escape sequences from zsh.
+shell-integration = zsh
+shell-integration-features = cursor,title
+
+# ── Window ────────────────────────────────────
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = none

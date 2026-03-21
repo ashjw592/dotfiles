@@ -1,0 +1,85 @@
+# ~/.inputrc
+# ─────────────────────────────────────────────
+# Vi mode for readline (affects bash, python REPL,
+# psql, fzf, etc. — anything that links readline)
+# ─────────────────────────────────────────────
+
+set editing-mode vi
+
+# Start every prompt in insert mode
+set keymap vi-insert
+
+# ─────────────────────────────────────────────
+# Cursor shape per mode
+# Beam (bar) in insert, block in normal
+# ─────────────────────────────────────────────
+set vi-ins-mode-string  \1\e[6 q\2
+set vi-cmd-mode-string  \1\e[2 q\2
+
+# ─────────────────────────────────────────────
+# Quality-of-life
+# ─────────────────────────────────────────────
+
+# Case-insensitive completion
+set completion-ignore-case on
+
+# Treat - and _ as equivalent during completion
+set completion-map-case on
+
+# Show all matches immediately (no need to press Tab twice)
+set show-all-if-ambiguous on
+
+# Don't ring the bell on ambiguous completion
+set bell-style none
+
+# Append a trailing slash when completing directory names
+set mark-directories on
+set mark-symlinked-directories on
+
+# Show file type indicator (like ls -F) in completion list
+set visible-stats on
+
+# Color completion entries by file type (uses $LS_COLORS)
+set colored-stats on
+set colored-completion-prefix on
+
+# Don't show completions if there are more than 200 matches;
+# ask for confirmation instead
+set completion-query-items 200
+
+# Keep the display tidy: only show the last component of long paths
+set print-completions-horizontally off
+
+# ─────────────────────────────────────────────
+# Insert mode bindings
+# ─────────────────────────────────────────────
+set keymap vi-insert
+
+# Ctrl-L clears screen in insert mode
+Control-l: clear-screen
+
+# Ctrl-A / Ctrl-E  (familiar even in vi-mode)
+Control-a: beginning-of-line
+Control-e: end-of-line
+
+# Ctrl-W  delete word backwards
+Control-w: backward-kill-word
+
+# Ctrl-U  delete to beginning of line
+Control-u: unix-line-discard
+
+# Up/Down arrow searches history by prefix (type "git " then ↑)
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# ─────────────────────────────────────────────
+# Normal (command) mode bindings
+# ─────────────────────────────────────────────
+set keymap vi-command
+
+# Up/Down history search works in normal mode too
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Ctrl-L clears screen from normal mode as well
+Control-l: clear-screen
