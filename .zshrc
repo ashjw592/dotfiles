@@ -143,3 +143,8 @@ bindkey '^[[B' history-search-forward
 eval "$(starship init zsh)"
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Auto-start tmux
+if command -v tmux &>/dev/null && [[ -z "$TMUX" ]]; then
+  exec tmux
+fi
