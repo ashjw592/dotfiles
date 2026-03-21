@@ -48,6 +48,7 @@ if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#626880"   # Catppuccin Frappé surface2
   # Accept suggestion with Ctrl-Space or right arrow
   bindkey '^ ' autosuggest-accept
+bindkey -M viins '^ ' autosuggest-accept
   bindkey '^[[C' autosuggest-accept  # right arrow
 fi
 
@@ -106,6 +107,8 @@ alias cat='bat --style=plain --paging=never 2>/dev/null || cat'  # bat if instal
 
 # ── Vi mode ───────────────────────────────────
 bindkey -v
+bindkey -M viins '^i' complete-word
+bindkey -M viins '^[[Z' reverse-menu-complete  # shift-tab to go backwards
 KEYTIMEOUT=1
 bindkey -M vicmd ':' undefined-key   # disable execute-named-cmd
 
