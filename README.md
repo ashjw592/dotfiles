@@ -41,6 +41,16 @@ curl -Lo eza.tar.gz https://github.com/eza-community/eza/releases/latest/downloa
 tar xzf eza.tar.gz && sudo mv eza /usr/local/bin/ && rm eza.tar.gz
 ```
 
+## Config Locations
+
+| File | Path |
+|------|------|
+| Ghostty | `~/.config/ghostty/config` |
+| tmux | `~/.config/tmux/tmux.conf` |
+| zsh | `~/.config/zsh/.zshrc` |
+| Starship | `~/.config/starship.toml` |
+| readline | `~/.config/readline/inputrc` |
+
 ## Usage
 
 See [CHEATSHEET.md](CHEATSHEET.md) for all keybinds, aliases, and tmux shortcuts.
@@ -49,7 +59,7 @@ See [CHEATSHEET.md](CHEATSHEET.md) for all keybinds, aliases, and tmux shortcuts
 
 ```sh
 dotfiles status
-dotfiles add ~/.zshrc
+dotfiles add ~/.config/zsh/.zshrc
 dotfiles commit -m "update zshrc"
 dotfiles push
 ```

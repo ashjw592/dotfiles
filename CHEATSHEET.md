@@ -103,7 +103,7 @@
 | File | Path |
 |------|------|
 | Ghostty | `~/.config/ghostty/config` |
-| tmux | `~/.tmux.conf` |
-| zsh | `~/.zshrc` |
+| tmux | `~/.config/tmux/tmux.conf` |
+| zsh | `~/.config/zsh/.zshrc` |
 | Starship prompt | `~/.config/starship.toml` |
-| readline (inputrc) | `~/.inputrc` |
+| readline | `~/.config/readline/inputrc` |
