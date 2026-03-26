@@ -1,6 +1,8 @@
 # ~/.config/ghostty/config
 
-theme = Catppuccin Frappe
+# theme = Catppuccin Frappe
+# custom theme
+theme = pink-black
 custom-shader = shaders/cursor_warp.glsl
 
 # ── Font ──────────────────────────────────────
