@@ -1,6 +1,7 @@
 # ~/.zshrc
 [[ -n "$ZSH_VERSION" ]] || return
-
+# ── env ───────────────────────────────────
+export XDG_CONFIG_HOME="$HOME/.config"
 # ── History ───────────────────────────────────
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
