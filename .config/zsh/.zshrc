@@ -103,7 +103,13 @@ alias mkdir='mkdir -p'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias cat='bat --style=plain --paging=never 2>/dev/null || cat'  # bat if installed
+cat() {
+  if command -v bat &>/dev/null; then
+    bat --style=plain --paging=never "$@"
+  else
+    command cat "$@"
+  fi
+}
 
 # ── Vi mode ───────────────────────────────────
 bindkey -v
@@ -151,3 +157,11 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 if command -v tmux &>/dev/null && [[ -z "$TMUX" ]]; then
   exec tmux
 fi
+
+# Aliases
+alias editzsh='nvim ~/.config/zsh/.zshrc'
+alias editnvim='nvim ~/.config/nvim/'
+wallpaper() {
+	gsettings set org.gnome.desktop.background picture-uri "file://$1"
+	gsettings set org.gnome.desktop.background picture-uri-dark "file://$1"
+}
