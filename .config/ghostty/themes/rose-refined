@@ -1,0 +1,30 @@
+# Rose Refined - A tasteful pink theme with #eebebe accents
+background = #1a1619
+foreground = #eebebe
+
+# Cursor
+cursor-color = #eebebe
+
+# Selection
+selection-background = #3d2a33
+selection-foreground = #eebebe
+
+# Normal colors (0–7)
+palette = 0= #2d2226
+palette = 1= #e88388
+palette = 2= #a8c9a0
+palette = 3= #d9b896
+palette = 4= #9baac2
+palette = 5= #eebebe
+palette = 6= #94c3bf
+palette = 7= #d8c1c1
+
+# Bright colors (8–15)
+palette = 8= #554548
+palette = 9= #f29a9f
+palette = 10= #b8d9b0
+palette = 11= #e9c8a6
+palette = 12= #abbad2
+palette = 13= #ffced0
+palette = 14= #a4d3cf
+palette = 15= #f5e4e4

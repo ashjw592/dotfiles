@@ -2,7 +2,8 @@
 
 # theme = Catppuccin Frappe
 # custom theme
-theme = pink-black
+# theme = pink-black
+theme = rose-refined
 custom-shader = shaders/cursor_warp.glsl
 
 # ── Font ──────────────────────────────────────
