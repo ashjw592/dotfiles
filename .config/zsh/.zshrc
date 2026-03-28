@@ -163,6 +163,9 @@ fi
 alias editzsh='nvim ~/.config/zsh/.zshrc'
 alias editnvim='nvim ~/.config/nvim/'
 wallpaper() {
-	gsettings set org.gnome.desktop.background picture-uri "file://$1"
-	gsettings set org.gnome.desktop.background picture-uri-dark "file://$1"
+	# Use zsh's :A modifier to convert to absolute path
+	local path="${1:A}"
+	/usr/bin/gsettings set org.gnome.desktop.background picture-uri "file://$path"
+	/usr/bin/gsettings set org.gnome.desktop.background picture-uri-dark "file://$path"
 }
+export PATH="$HOME/.local/bin:$PATH"
