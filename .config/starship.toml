@@ -30,7 +30,7 @@ ahead     = "⇡${count}"
 behind    = "⇣${count}"
 diverged  = "⇕"
 deleted   = "✘"
-stashed   = "$"
+stashed   = "≡$count"
 
 [character]
 success_symbol = " [❯](bold green)"
@@ -49,3 +49,4 @@ disabled = true
 
 [hostname]
 disabled = true
+
