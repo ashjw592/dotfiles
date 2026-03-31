@@ -103,7 +103,6 @@ alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -iv'
 cat() {
   if command -v bat &>/dev/null; then
     bat --style=plain --paging=never "$@"
