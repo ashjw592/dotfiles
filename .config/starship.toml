@@ -5,7 +5,7 @@ add_newline = false
 # Single line: directory → git → character
 # (vi mode is handled by zsh cursor shape + tmux pill,
 #  not duplicated here to keep the prompt clean)
-format = "$directory$git_branch$git_status$character"
+format = "$directory$git_branch$git_status$python$character"
 
 
 
@@ -37,6 +37,11 @@ success_symbol = " [❯](bold green)"
 error_symbol   = " [❯](bold red)"
 vimcmd_symbol  = " [❮](bold yellow)"
 
+[python]
+format = " [${symbol}${pyenv_prefix}(${version})(\\($virtualenv\\))]($style)"
+symbol = "🐍 "
+style = "bold yellow"
+
 # Disable modules we don't need
 [package]
 disabled = true
@@ -49,4 +54,3 @@ disabled = true
 
 [hostname]
 disabled = true
-
