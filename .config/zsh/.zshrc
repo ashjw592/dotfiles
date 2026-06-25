@@ -168,3 +168,6 @@ wallpaper() {
 	/usr/bin/gsettings set org.gnome.desktop.background picture-uri-dark "file://$path"
 }
 export PATH="$HOME/.local/bin:$PATH"
+
+# for rust
+. "$HOME/.cargo/env"
