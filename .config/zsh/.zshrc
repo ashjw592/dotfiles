@@ -171,3 +171,5 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # for rust
 . "$HOME/.cargo/env"
+# for sml
+export PATH="$HOME/src/smlnj-build/bin:$PATH"
